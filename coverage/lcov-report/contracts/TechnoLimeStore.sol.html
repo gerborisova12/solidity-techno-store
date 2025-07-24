@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/TechnoLimeStore.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> TechnoLimeStore.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>66/66</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier:MIT
+pragma solidity ^0.8.7;
+import "hardhat/console.sol";
+&nbsp;
+contract TechnoLimeStore {
+    address public immutable admin;
+    address payable public buyer;
+    bool elementExists;
+    bool productIsAvailable;
+    bool canBePurchased = true;
+    uint256 existingElementIndex;
+    uint256 purchasedProductIndex;
+&nbsp;
+    struct Product {
+        uint256 id;
+        uint256 quantity;
+        uint256 price;
+    }
+&nbsp;
+    Product private product;
+    Product[] private products;
+&nbsp;
+    constructor() {
+        ///@notice sets the owner of the contract when it's deployed (only 1 time)
+        admin = msg.sender;
+        ///@notice creates a product id:1,quantity:1,price:1 when cotract is deployed
+        products.push(Product(1, 1, 1));
+    }
+&nbsp;
+    ///@notice mapping of the buyer's address to the products ids he bought
+    ///@custom:example 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db:[1,2,3]
+    mapping(address =&gt; uint256[]) private buyerProducts;
+&nbsp;
+    ///@notice mapping of the product ids to the buyers' address that've ever purchased it
+    ///@custom:example 1:[0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db,0x3210993Bc481177ec7E8f571ceCaE8A9e22C02db]
+    mapping(uint256 =&gt; address[]) private productBuyers;
+&nbsp;
+    ///@notice mapping of the product ids to the block timestamp when the purchase was made
+    ///@custom:example 1:256
+    mapping(uint256 =&gt; uint256) private blockWhenPurchased;
+&nbsp;
+    event ProductCreated(uint256 id, uint256 quantity);
+    event ProductReturned(uint256 id, address buyer);
+    event ProductUpdated(uint256 id, uint256 quantity);
+    event ProductPurchased(uint256 id, address buyer);
+&nbsp;
+    ///@notice checks if the user is the admin
+    modifier hasAdminRights() {
+        require(msg.sender == admin, "Only admin has this rights");
+        _;
+    }
+&nbsp;
+    ///@notice sets the buyer
+    modifier setBuyer() {
+        buyer = payable(msg.sender);
+        _;
+    }
+&nbsp;
+    ///@notice checks if product exists
+    ///@dev sets existingElementIndex and elementExists
+    modifier productExists(uint256 _id) {
+        elementExists = false;
+        for (uint256 i = 0; i &lt; products.length; i++) {
+            if (products[i].id == _id) {
+                existingElementIndex = i;
+                elementExists = true;
+                break;
+            }
+        }
+        _;
+    }
+&nbsp;
+    ///@notice checks if product.quantity is &gt; 0
+    ///@dev sets productIsAvailable
+    modifier productAvailability(uint256 _id) {
+        if (products[existingElementIndex].quantity &gt; 0) {
+            productIsAvailable = true;
+        } else {
+            revert("This product is out of stock");
+        }
+        _;
+    }
+&nbsp;
+    ///@notice checks if the product has been purchased by this buyer
+    ///@dev sets canBePurchased,purchasedProductIndex
+    modifier alreadyPurchased(uint256 _id) {
+        canBePurchased = true;
+        for (uint256 i = 0; i &lt; buyerProducts[buyer].length; i++) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (buyerProducts[buyer][i] == _id) {
+                canBePurchased = false;
+                purchasedProductIndex = i;
+            }
+        }
+        _;
+    }
+&nbsp;
+    ///@notice Adds products or edits product quantity.Only admin can use it.
+    ///@notice The product price is set to 1 and can't be changed.
+    ///@notice If the product exists, only changes the quantity
+    ///@dev expects product id and quantity example: 2,3
+    function createOrUpdateProduct(uint256 _id, uint256 _quantity)
+        external
+        hasAdminRights
+        <span class="missing-if-branch" title="else path not taken" >E</span>productExists(_id)
+    {
+        if (elementExists == true) {
+            products[existingElementIndex].quantity = _quantity;
+            console.log(
+                "Updating",
+                products[existingElementIndex].id,
+                "to be",
+                products[existingElementIndex].quantity
+            );
+            emit ProductUpdated(_id, _quantity);
+        } else {
+            products.push(Product(_id, _quantity, 1));
+            emit ProductCreated(_id, _quantity);
+            console.log(
+                "creating product",
+                _id,
+                "with price 1 and quantity",
+                _quantity
+            );
+        }
+    }
+&nbsp;
+    ///@notice Returns all the product ids
+    function getProductsIds() external view returns (uint256[] memory) {
+        uint256[] memory id = new uint256[](products.length);
+        for (uint256 i = 0; i &lt; products.length; i++) {
+            Product memory productToShow = products[i];
+            id[i] = productToShow.id;
+        }
+        return id;
+    }
+&nbsp;
+    ///@notice Returns all the products quantities
+    ///@notice for testing purposes
+    function getProductsQuantities() external view returns (uint256[] memory) {
+        uint256[] memory quantity = new uint256[](products.length);
+        for (uint256 i = 0; i &lt; products.length; i++) {
+            Product memory productToShow = products[i];
+            quantity[i] = productToShow.quantity;
+        }
+        return quantity;
+    }
+&nbsp;
+    ///@notice Users can buy products by their ids
+    ///@notice Buyer can't buy a product more than once and products that are out of stock
+    ///@dev sets buyer
+    ///@dev expects product id, example:2
+    function buyProduct(uint256 _id)
+        external
+        payable
+        <span class="missing-if-branch" title="else path not taken" >E</span>setBuyer
+        <span class="missing-if-branch" title="else path not taken" >E</span>productExists(_id)
+        <span class="missing-if-branch" title="else path not taken" >E</span>alreadyPurchased(_id)
+        productAvailability(_id)
+    {
+        require(elementExists, "This product does not exist");
+        require(canBePurchased, "You have already purchased this product");
+        require(msg.value == 1, "You need to send 1 wei to buy the product");
+        productBuyers[_id].push(buyer);
+        buyerProducts[buyer].push(_id);
+        products[existingElementIndex].quantity -= 1;
+        blockWhenPurchased[_id] = (block.timestamp);
+        console.log("Product", _id, "purchased");
+        emit ProductPurchased(_id, buyer);
+    }
+&nbsp;
+    ///@notice Users can return products if 100 blocks after purchased haven't passed
+    ///@notice when returned quantity of product is increased and product is removed from buyerProducts mapping
+    ///@dev sets buyer
+    ///@dev expects product id,example:2
+    function returnProduct(uint256 _id)
+        external
+        <span class="missing-if-branch" title="else path not taken" >E</span>setBuyer
+        <span class="missing-if-branch" title="else path not taken" >E</span>alreadyPurchased(_id)
+        <span class="missing-if-branch" title="else path not taken" >E</span>productExists(_id)
+    {
+        require(!canBePurchased, "You did not buy this product");
+        uint256 currentBlock = block.timestamp;
+        uint256 passedBlocks = currentBlock - blockWhenPurchased[_id];
+        require(passedBlocks &lt; 100, "You can no longer return this product");
+        buyerProducts[buyer][purchasedProductIndex] = buyerProducts[buyer][
+            buyerProducts[buyer].length - 1
+        ];
+        buyerProducts[buyer].pop();
+        products[existingElementIndex].quantity += 1;
+        (bool sent, bytes memory data) = buyer.call{value: 1}("");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(sent, "Failed to refund wei");
+        console.log("Product", _id, "returned");
+        emit ProductReturned(_id, buyer);
+    }
+&nbsp;
+    ///@notice Returns the contract balance for testing purposes
+    function getContractBalance() public view returns (uint256) {
+        return address(this).balance;
+    }
+&nbsp;
+    ///@notice Returns the address of the buyers that bought the product
+    ///@dev expects product id,example:2
+    function getAddressOfProductBuyers(uint256 _id)
+        external
+        view
+        returns (address[] memory)
+    {
+        address[] memory buyersAddress = new address[](
+            productBuyers[_id].length
+        );
+        for (uint256 i = 0; i &lt; productBuyers[_id].length; i++) {
+            address buyers = productBuyers[_id][i];
+            buyersAddress[i] = buyers;
+        }
+        return buyersAddress;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 12 2023 15:11:03 GMT+0300 (Eastern European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "lime-techno-store-qqayva",
+  "version": "1.0.0",
+  "description": "Please go through the chapters in order to prepare yourself fot the challenge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.15.0",
+    "solidity-coverage": "^0.8.2"
+  }
+}
